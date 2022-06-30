@@ -2,13 +2,13 @@ version: 0.0
 os: linux
 files:
   - source: .
-    destination: /home/ec2-user/SBAWSDeployment/
+    destination: /home/ec2-user/server
 hooks:
-  AfterInstall:
-   - location: setup.sh
-     timeout: 300
-     runas: root
+   ApplicationStop:
+    - location: scripts/server_stop.sh
+      timeout: 20
+      runas: ec2-user
   ApplicationStart:
-   - location: run.sh
-     timeout: 300
-     runas: root
+    - location: scripts/server_start.sh
+      timeout: 20
+      runas: ec2-user

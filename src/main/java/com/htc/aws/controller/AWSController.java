@@ -9,7 +9,7 @@ public class AWSController {
 
 	@RequestMapping("/Welcome")
 	public String Common() {
-		String Message = "Spring Boot AWS  Deployment Example";
+		String Message = "Spring Boot Deployment into AWS EC2 with Teraaform and Github Actions";
 		return Message;
 		
 	}

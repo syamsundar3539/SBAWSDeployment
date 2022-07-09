@@ -35,7 +35,7 @@ resource "aws_instance" "app_server" {
     ]
   }
   tags = {
-    Name = "First-Ec2-With-Terraform"
+    Name = "Ec2-With-Terraform"
   }
   connection {
     type    = "ssh"
